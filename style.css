@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+:root {
+  font-size: 13px;
+}
+
+body {
+  height: auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ecf2f8;
+  font-size: 13px;
+}
+body .container {
+  background-color: white;
+  height: 280px;
+  width: 730px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+}
+body .container .myimg {
+  flex: 3.7;
+  overflow: hidden;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+body .container .myimg img {
+  width: 100%;
+  height: 100%;
+  transform: matrix(1.5, 0, 0, 1, 50, 0);
+}
+body .container .myimg-info {
+  flex: 5;
+  padding: 30px;
+  position: relative;
+}
+body .container .myimg-info > h1 {
+  color: #48556a;
+  font-size: 1.8em;
+  padding-bottom: 15px;
+}
+body .container .myimg-info > p {
+  color: #6d7f97;
+  font-size: 1em;
+  padding-bottom: 15px;
+}
+body .container .myimg-info > .drawer {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-areas: "a b d" "a c d";
+}
+body .container .myimg-info > .drawer > .person {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  grid-area: a;
+}
+body .container .myimg-info > .drawer > h2 {
+  grid-area: b;
+  font-size: 1em;
+  padding-left: 15px;
+  color: #48556a;
+}
+body .container .myimg-info > .drawer > h3 {
+  grid-area: c;
+  font-size: 1em;
+  padding-left: 15px;
+  color: #6d7f97;
+}
+body .container .myimg-info > .drawer > .share {
+  grid-area: d;
+  text-align: center;
+  background-color: #ccc;
+  border-radius: 50%;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+body .container .myimg-info > .drawer > .share > i {
+  color: gray;
+  font-size: 1.3em;
+}
+body .container .myimg-info > .drawer > .share:hover {
+  background-color: #48556a;
+}
+body .container .myimg-info > .drawer > .share:hover i {
+  color: #ccc;
+}
+body .container .myimg-info .share-items {
+  display: flex;
+}
+body .container .myimg-info .mytrignal {
+  border: 13px solid transparent;
+  width: 0;
+  border-top-color: #48556a;
+  position: absolute;
+  bottom: 71px;
+  right: 39px;
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .trick {
+    display: none;
+  }
+
+  .share-items {
+    position: absolute;
+  }
+
+  .share-items {
+    bottom: 95px;
+    right: -70px;
+    width: 250px;
+    border-radius: 10px;
+    background-color: #48556a;
+    padding: 12px 35px;
+    box-shadow: 0px 0px 6px 1px black;
+    transform-origin: bottom center;
+    display: none;
+  }
+  .share-items > .solving > * {
+    color: white;
+    margin-left: 15px;
+  }
+  .share-items > .solving > span {
+    letter-spacing: 3px;
+    color: #6d7f97;
+  }
+  .share-items > .solving > i {
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  .share-items > .solving > i:hover {
+    color: #1ec7ff;
+  }
+}
+@media screen and (max-width: 800px) {
+  body .container {
+    height: auto;
+    width: 90%;
+    flex-direction: column;
+    box-shadow: 2px 2px 10px 1px #6e6e6e;
+    overflow: hidden;
+  }
+  body .container .myimg img {
+    transform: none;
+  }
+
+  .trick {
+    text-align: center;
+    background-color: #9eafc2;
+    border-radius: 50%;
+    padding: 10px 10px;
+    cursor: pointer;
+  }
+  .trick > i {
+    color: white;
+    font-size: 1.3em;
+  }
+  .trick:hover {
+    background-color: #48556a;
+  }
+  .trick:hover i {
+    color: #ccc;
+  }
+
+  .share-items {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    min-width: 100%;
+    padding: 15.5px 35px;
+    background-color: #48556a;
+    display: flex;
+    justify-content: space-between;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+    transform-origin: left;
+    z-index: 3;
+  }
+  .share-items > .solving > * {
+    color: white;
+    margin-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+  .share-items > .solving > span {
+    letter-spacing: 3px;
+    color: #6d7f97;
+    font-size: 1.5em;
+  }
+  .share-items > .solving > i {
+    font-size: 1.8em;
+    cursor: pointer;
+  }
+  .share-items > .solving > i:hover {
+    color: #1ec7ff;
+  }
+
+  .mytrignal {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
