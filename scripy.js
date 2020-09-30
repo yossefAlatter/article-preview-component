@@ -10,9 +10,11 @@ share.onclick = () => {
     if (x % 2 === 0) {
       shareItems.style.display = "flex";
       myTtrignal.style.display = "block";
+      shareItems.style.transform = "scaleX(1)";
     } else {
       shareItems.style.display = "none";
       myTtrignal.style.display = "none";
+      shareItems.style.transform = "scaleX(0)";
     }
     x += 1;
   }
